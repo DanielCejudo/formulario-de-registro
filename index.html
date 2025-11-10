@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Formulario de Registro</h1>
+        <form id="registerForm" novalidate>
+            <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                <p class="message" data-for="name"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <p class="message" data-for="email"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" autocomplete="new-password" required>
+                <p class="message" data-for="password"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirmar contraseña</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" required>
+                <p class="message" data-for="confirmPassword"></p>
+            </div>
+
+            <div class="form-group form-group--checkbox">
+                <label class="checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <span>Acepto los términos y condiciones</span>
+                </label>
+                <p class="message" data-for="terms"></p>
+            </div>
+
+            <button type="submit">Crear cuenta</button>
+        </form>
+        <section id="success" class="success" hidden>
+            <h2>¡Registro completo!</h2>
+            <p>Tu cuenta ha sido creada correctamente.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
